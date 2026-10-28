@@ -1,7 +1,9 @@
 using UnityEngine;
- 
+using UnityEngine.EventSystems;
+
 // Sends the player's movement to the Animator every frame
 // so the right animation plays at the right time.
+
 public class PlayerAnimatorController : MonoBehaviour
 {
     private Animator animator;       // plays the animations
@@ -27,7 +29,7 @@ public class PlayerAnimatorController : MonoBehaviour
         animator.SetBool("IsGrounded", grounded);
  
         // When Fire1 (left mouse button / left Ctrl) is released, roll
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Fire1")&&!EventSystem.current.IsPointerOverGameObject())
         {
             animator.SetTrigger("doRoll");
         }
