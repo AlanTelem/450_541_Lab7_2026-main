@@ -2,5 +2,6 @@ public enum PowerUpType
 {
     Speed,
     Jump,
-    ScoreMultiplier
+    ScoreMultiplier,
+    SuperCoin
 }

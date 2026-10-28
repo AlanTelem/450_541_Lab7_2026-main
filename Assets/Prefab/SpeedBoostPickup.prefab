@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7625708517113129929}
   - component: {fileID: 5024153457523017979}
   - component: {fileID: 8380272224477523736}
+  - component: {fileID: 447219554545624816}
   m_Layer: 0
   m_Name: SpeedBoostPickup
   m_TagString: Untagged
@@ -152,6 +153,25 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &447219554545624816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435741469057577830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715bd91c39da68546a8b428ec4e0181d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpPickup
+  respawnSpeedPowerUpTimer: 30
+  respawnJumpPowerUpTimer: 30
+  respawnScorePowerUpTimer: 30
+  visuals: {fileID: 3319682040535995869}
+  pickupSound: {fileID: 8300000, guid: 1161dfb92484bfe479ac72428222e6df, type: 3}
+  pickupEffect: {fileID: 5553371706858413341, guid: 67f8812bf03c0374597afcfb89e24ed6, type: 3}
+  type: 0
 --- !u!1 &3319682040535995869
 GameObject:
   m_ObjectHideFlags: 0

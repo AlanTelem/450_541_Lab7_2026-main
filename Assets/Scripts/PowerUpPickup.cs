@@ -9,6 +9,7 @@ public class PowerUpPickup : MonoBehaviour
     [SerializeField] private GameObject visuals;
     [SerializeField] private AudioClip pickupSound;
     [SerializeField] private GameObject pickupEffect;
+    [SerializeField] private int SuperCoinScore = 50;
     public PowerUpType type;
     private Collider triggerCollider;
     private float timer = 0f;
@@ -42,6 +43,7 @@ public class PowerUpPickup : MonoBehaviour
             case PowerUpType.Speed: powerUps.ActivateSpeedBoost(); break;
             case PowerUpType.Jump:  powerUps.ActivateJumpBoost(); break;
             case PowerUpType.ScoreMultiplier: powerUps.ActivateScoreBoost(); break;
+            case PowerUpType.SuperCoin: ScoreManager.Instance.AddScore(SuperCoinScore); break;
         }
 
         // 2. Play sound, spawn particles
