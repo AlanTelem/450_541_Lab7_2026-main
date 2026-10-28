@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3661038706359866098}
   - component: {fileID: 6049903767039485574}
   - component: {fileID: 4916973505066518696}
+  - component: {fileID: -5684565768690795789}
   m_Layer: 0
   m_Name: ScoreBoostPickup
   m_TagString: Untagged
@@ -171,7 +172,30 @@ MonoBehaviour:
   visuals: {fileID: 4544908198719318643}
   pickupSound: {fileID: 8300000, guid: 1161dfb92484bfe479ac72428222e6df, type: 3}
   pickupEffect: {fileID: 5553371706858413341, guid: ede407601ede89e47bee71641fd63719, type: 3}
+  SuperCoinScore: 50
   type: 2
+--- !u!95 &-5684565768690795789
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402571384143658176}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03ce04f77ee41924fbb1d12d900c5ae0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4544908198719318643
 GameObject:
   m_ObjectHideFlags: 0

@@ -101,8 +101,8 @@ GameObject:
   - component: {fileID: 6362305368549157132}
   - component: {fileID: 5466889190724464766}
   - component: {fileID: 6902771097746429340}
-  - component: {fileID: 906285748428174329}
   - component: {fileID: 6727062172758631223}
+  - component: {fileID: 8518332702363517414}
   m_Layer: 0
   m_Name: ScorePickup
   m_TagString: Untagged
@@ -244,18 +244,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &906285748428174329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6425541288819650085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d62def49a8a04c4797a98340ff1b547, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
 --- !u!114 &6727062172758631223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,4 +262,27 @@ MonoBehaviour:
   visuals: {fileID: 3253026477954143135}
   pickupSound: {fileID: 8300000, guid: 90aeda790b24a3e4f873a4cbe8e4624c, type: 3}
   pickupEffect: {fileID: 5553371706858413341, guid: 5cd1eb7a32d06dd40ae432a75563b898, type: 3}
-  type: 0
+  SuperCoinScore: 50
+  type: 3
+--- !u!95 &8518332702363517414
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6425541288819650085}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03ce04f77ee41924fbb1d12d900c5ae0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

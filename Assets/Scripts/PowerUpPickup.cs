@@ -41,7 +41,7 @@ public class PowerUpPickup : MonoBehaviour
         switch (type)
         {
             case PowerUpType.Speed: powerUps.ActivateSpeedBoost(); break;
-            case PowerUpType.Jump:  powerUps.ActivateJumpBoost(); break;
+            case PowerUpType.Jump: powerUps.ActivateJumpBoost(); break;
             case PowerUpType.ScoreMultiplier: powerUps.ActivateScoreBoost(); break;
             case PowerUpType.SuperCoin: ScoreManager.Instance.AddScore(SuperCoinScore); break;
         }
@@ -50,10 +50,15 @@ public class PowerUpPickup : MonoBehaviour
         GetComponent<AudioSource>().PlayOneShot(pickupSound);
         Instantiate(pickupEffect, transform.position, Quaternion.identity);
 
-        // 3. Hide and schedule respawn
-        visuals.SetActive(false);
-        triggerCollider.enabled = false;
-        Invoke(nameof(Reappear), timer);
+        // 3. Hide and schedule respawn, skip if SuperCoin
+        if (type != PowerUpType.SuperCoin)
+        {
+            visuals.SetActive(false);
+            triggerCollider.enabled = false;
+            Invoke(nameof(Reappear), timer);
+        }
+        else
+        Destroy(this.gameObject);
     }
 
     private void Reappear()
@@ -64,6 +69,6 @@ public class PowerUpPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
