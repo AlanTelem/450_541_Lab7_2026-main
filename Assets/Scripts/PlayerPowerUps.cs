@@ -19,12 +19,12 @@ public class PlayerPowerUps : MonoBehaviour
     void Start()
     {
         movement = GetComponent<PlayerMovement>();
+        if (ScoreManager.Instance != null) ScoreManager.Instance.ScoreMultiplier = 1f;
     }
-
     public void ActivateSpeedBoost()
     {
         SpeedTimeLeft = speedPowerUpDuration;
-        movement.SpeedMultiplier = speedUpMultiplier;
+        movement.SpeedPowerUpMultiplier = speedUpMultiplier;
     }
 
     public void ActivateJumpBoost()
@@ -36,7 +36,7 @@ public class PlayerPowerUps : MonoBehaviour
     public void ActivateScoreBoost()
     {
         ScoreTimeLeft = pointPowerUpDuration;
-        ScoreManager.Instance.scoreMultiplier =2f;
+        ScoreManager.Instance.ScoreMultiplier = scoreMultiplier;
     }
 
     // Update is called once per frame
@@ -45,7 +45,7 @@ public class PlayerPowerUps : MonoBehaviour
         if (SpeedTimeLeft > 0)
         {
             SpeedTimeLeft -= Time.deltaTime;
-            if (SpeedTimeLeft <= 0) movement.SpeedMultiplier = 1f;
+            if (SpeedTimeLeft <= 0) movement.SpeedPowerUpMultiplier = 1f;
         }
 
         if (JumpTimeLeft > 0)
@@ -54,10 +54,10 @@ public class PlayerPowerUps : MonoBehaviour
             if (JumpTimeLeft <= 0) movement.HasDoubleJumpPowerUp = false;
         }
 
-        if (ScoreTimeLeft > 0) 
+        if (ScoreTimeLeft > 0)
         {
             ScoreTimeLeft -= Time.deltaTime;
-            if (ScoreTimeLeft <= 0) ScoreManager.Instance.scoreMultiplier = 1f;
+            if (ScoreTimeLeft <= 0) ScoreManager.Instance.ScoreMultiplier = 1f;
         }
     }
 }
