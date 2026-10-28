@@ -33,19 +33,20 @@ public class PowerUpPickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerPowerUps player = other.GetComponent<PlayerPowerUps>();
-        if (player == null) return;
+        PlayerPowerUps powerUps = other.GetComponent<PlayerPowerUps>();
+        if (powerUps == null) return;
 
         // 1. Apply the effect
         switch (type)
         {
-            case PowerUpType.Speed: player.ActivateSpeedBoost(); break;
-            case PowerUpType.Jump:  player.ActivateJumpBoost(); break;
-            case PowerUpType.ScoreMultiplier: player.ActivateScoreBoost(); break;
+            case PowerUpType.Speed: powerUps.ActivateSpeedBoost(); break;
+            case PowerUpType.Jump:  powerUps.ActivateJumpBoost(); break;
+            case PowerUpType.ScoreMultiplier: powerUps.ActivateScoreBoost(); break;
         }
 
         // 2. Play sound, spawn particles
-        audioSource.Play();
+        GetComponent<AudioSource>().PlayOneShot(pickupSound);
+        Instantiate(pickupEffect, transform.position, Quaternion.identity);
 
         // 3. Hide and schedule respawn
         visuals.SetActive(false);

@@ -48,7 +48,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -169,9 +169,9 @@ MonoBehaviour:
   respawnSpeedPowerUpTimer: 30
   respawnJumpPowerUpTimer: 30
   respawnScorePowerUpTimer: 30
-  visuals: {fileID: 0}
-  pickupSound: {fileID: 0}
-  pickupEffect: {fileID: 0}
+  visuals: {fileID: 3319682040535995869}
+  pickupSound: {fileID: 8300000, guid: 1161dfb92484bfe479ac72428222e6df, type: 3}
+  pickupEffect: {fileID: 5553371706858413341, guid: 1b518518679ec63489bc1b1ce8235dc7, type: 3}
   type: 1
 --- !u!95 &1923430695047310492
 Animator:

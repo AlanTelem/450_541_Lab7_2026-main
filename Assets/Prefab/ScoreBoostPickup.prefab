@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 62723638569635919}
   - component: {fileID: 3661038706359866098}
   - component: {fileID: 6049903767039485574}
+  - component: {fileID: 4916973505066518696}
   m_Layer: 0
-  m_Name: ScoreBoostPickup (1)
+  m_Name: ScoreBoostPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,6 +153,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4916973505066518696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402571384143658176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715bd91c39da68546a8b428ec4e0181d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpPickup
+  respawnSpeedPowerUpTimer: 30
+  respawnJumpPowerUpTimer: 30
+  respawnScorePowerUpTimer: 30
+  visuals: {fileID: 4544908198719318643}
+  pickupSound: {fileID: 8300000, guid: 1161dfb92484bfe479ac72428222e6df, type: 3}
+  pickupEffect: {fileID: 5553371706858413341, guid: ede407601ede89e47bee71641fd63719, type: 3}
+  type: 2
 --- !u!1 &4544908198719318643
 GameObject:
   m_ObjectHideFlags: 0
