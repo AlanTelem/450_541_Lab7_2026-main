@@ -51,14 +51,10 @@ public class PowerUpPickup : MonoBehaviour
         Instantiate(pickupEffect, transform.position, Quaternion.identity);
 
         // 3. Hide and schedule respawn, skip if SuperCoin
-        if (type != PowerUpType.SuperCoin)
-        {
-            visuals.SetActive(false);
-            triggerCollider.enabled = false;
-            Invoke(nameof(Reappear), timer);
-        }
-        else
-        Destroy(this.gameObject);
+        visuals.SetActive(false);
+        triggerCollider.enabled = false;
+        if (type != PowerUpType.SuperCoin) Invoke(nameof(Reappear), timer);
+        else Destroy(this.gameObject, 1f);
     }
 
     private void Reappear()
