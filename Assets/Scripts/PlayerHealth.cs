@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float invulnerabilityDuration = 1f;
     private float invulnerabilityTimer = 0f;
     public int CurrentHealth {get; private set;}
+    public int MaxHealth => maxHealth;
     //consider adding damage multiplier
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

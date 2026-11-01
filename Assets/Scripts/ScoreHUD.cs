@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro; // TMP_Text
 
 // Updates the HUD every frame from the ScoreManager and PlayerPowerUps.
-public class HUDController : MonoBehaviour
+public class ScoreHUD : MonoBehaviour
 {
     [Header("Score")]
     [SerializeField] private TMP_Text scoreText;
