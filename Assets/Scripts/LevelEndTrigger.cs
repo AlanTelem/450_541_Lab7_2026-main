@@ -14,6 +14,6 @@ public class LevelEndTrigger : MonoBehaviour
         // to be destroyed together with the rest of SampleScene
         ScoreManager.Instance.SaveFinalScore();
  
-        SceneManager.LoadScene(nextSceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

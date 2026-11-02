@@ -11,6 +11,13 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void PlayAgain()
+    {
+        if(ScoreManager.Instance != null) ScoreManager.Instance.PlayAgain();
+        //call startMenu
+        SceneManager.LoadScene(0);
+    }
  
     public void QuitGame()
     {

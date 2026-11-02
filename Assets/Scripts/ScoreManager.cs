@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
     // new scene loads, but static values stay in memory.
     public static int FinalScore { get; private set; }
     public float ScoreMultiplier { get; set; } = 1f;
-    public static int ScoreAtStartOfLevel { get; private set; }
+    public int ScoreAtStartOfLevel { get; private set; }
     // Anyone can read the score, only ScoreManager can change it
     public int CurrentScore { get; private set; }
     private void OnEnable() { SceneManager.sceneLoaded += OnSceneLoaded; } //when component is turned on, adds OnSceneLoaded so unity engine runs it every time a scene finishes loading 
