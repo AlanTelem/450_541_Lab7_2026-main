@@ -1,7 +1,6 @@
 // using System.Runtime.ConstrainedExecution;
 // using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 // Moves the player with a Rigidbody: 
 // A/D or Left/Right arrows to ROTATE, W/S or Up/Down to move Forward/Backward, Space to jump.
@@ -145,14 +144,5 @@ public class PlayerMovement : MonoBehaviour
         doubleJumpRequested = true;
         hasDoubleJumped = true;
         return true;
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("DeathPlane"))
-        {
-            if (ScoreManager.Instance != null) ScoreManager.Instance.RestartLevelScore();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
     }
 }

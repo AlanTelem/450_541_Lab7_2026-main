@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6600821266857531796}
   - component: {fileID: 4858814592278623536}
   m_Layer: 0
-  m_Name: SpeedBoostPickup
+  m_Name: BoostSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

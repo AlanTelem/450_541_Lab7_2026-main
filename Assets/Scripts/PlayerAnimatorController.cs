@@ -9,6 +9,9 @@ public class PlayerAnimatorController : MonoBehaviour
     private Animator animator;       // plays the animations
     private PlayerMovement movement; // our movement script
     private Rigidbody rb;            // to read the player's speed
+    // mixing concerns so breaking a coding rule, but flip animation is read only so this'll have to do for now
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip flipSound;
  
     private void Start()
     {
@@ -46,6 +49,7 @@ public class PlayerAnimatorController : MonoBehaviour
             if (Input.GetButtonDown("Jump") && movement.TryDoubleJump())
             {
                 animator.SetTrigger("doDoubleJump");
+                audioSource.PlayOneShot(flipSound);
             }
         }
     }
