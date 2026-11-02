@@ -1,5 +1,5 @@
 using UnityEngine;
-public class ObjectMover : MonoBehaviour
+public class TrapMovement : MonoBehaviour
 {
     [SerializeField] float timer = 0.0f;
     [SerializeField] float directionChangeDelay = 2.0f;

@@ -1,6 +1,6 @@
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
-public class TrapController : MonoBehaviour
+public class TrapSpinning : MonoBehaviour
 {
     public float rotationSpeed = 100f;
     private Rigidbody rb;
