@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("You are dead, act accordingly.");
+        // Debug.Log("You are dead, act accordingly.");
         if (ScoreManager.Instance != null) ScoreManager.Instance.RestartLevelScore();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

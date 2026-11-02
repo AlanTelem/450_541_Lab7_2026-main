@@ -18,7 +18,7 @@ public class TrapTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("I am an evil trap. Here hold this health decrement.");//this gets called in console, where's the player's debug log?
+            // Debug.Log("I am an evil trap. Here hold this health decrement.");//this gets called in console, where's the player's debug log?
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
             if (playerHealth != null) playerHealth.TakeDamage(damageAmount);
         }
