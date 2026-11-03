@@ -16,24 +16,26 @@ public class PowerUpHUD : MonoBehaviour
     [SerializeField] private TMP_Text scoreTimeText;
     private void Update()
     {
+        if (powerUps == null) return;
+
         float speedTimeLeft = powerUps.SpeedTimeLeft;
         float jumpTimeLeft = powerUps.JumpTimeLeft;
         float scoreTimeLeft = powerUps.ScoreTimeLeft;
- 
-        // Visible for the whole boost, hidden the rest of the time
-        speedIndicator.SetActive(speedTimeLeft > 0f);
- 
-        // CeilToInt rounds 6.2 up to 7, so we never show 0s too early
-        speedTimeText.text = Mathf.CeilToInt(speedTimeLeft) + "s";
-        // Visible for the whole boost, hidden the rest of the time
-        jumpIndicator.SetActive(jumpTimeLeft > 0f);
- 
-        // CeilToInt rounds 6.2 up to 7, so we never show 0s too early
-        jumpTimeText.text = Mathf.CeilToInt(jumpTimeLeft) + "s";
-        // Visible for the whole boost, hidden the rest of the time
-        scoreIndicator.SetActive(scoreTimeLeft > 0f);
- 
-        // CeilToInt rounds 6.2 up to 7, so we never show 0s too early
-        scoreTimeText.text = Mathf.CeilToInt(scoreTimeLeft) + "s";
+
+        if (speedIndicator != null && speedTimeText != null)
+        {
+            speedIndicator.SetActive(speedTimeLeft > 0f);
+            speedTimeText.text = Mathf.CeilToInt(speedTimeLeft) + "s";
+        }
+        if (jumpIndicator != null && jumpTimeText != null)
+        {
+            jumpIndicator.SetActive(jumpTimeLeft > 0f);
+            jumpTimeText.text = Mathf.CeilToInt(jumpTimeLeft) + "s";
+        }
+        if (scoreIndicator != null && scoreTimeText != null)
+        {
+            scoreIndicator.SetActive(scoreTimeLeft > 0f);
+            scoreTimeText.text = Mathf.CeilToInt(scoreTimeLeft) + "s";
+        }
     }
 }
